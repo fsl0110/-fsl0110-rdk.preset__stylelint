@@ -1,17 +1,20 @@
 {
-  "name": "@nova/rdk.preset__stylelint",
+  "name": "@fsl0110/rdk.preset__stylelint",
   "version": "0.0.1",
-  "description": "React Developer Kit Preset StyleLint",
+  "description": "React Developer Kit Shareable Preset StyleLint",
   "main": "index.js",
-  "author": "Novartis",
+  "author": "Unknown modified by Frank Simon Lechner",
   "license": "UNLICENSED",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fsl0110/-fsl0110-rdk.preset__stylelint"
+  },
   "keywords": [
     "stylelint",
     "preset"
   ],
   "dependencies": {
-    "stylelint-order": "^2.2.1",
-    "stylelint-scss": "^3.6.0"
+    "stylelint-order": "^3.0.1",
+    "stylelint-scss": "^3.9.4"
   }
 }

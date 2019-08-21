@@ -4,208 +4,83 @@ const ON = true;
 const OFF = null;
 
 module.exports = {
-  plugins: "stylelint-order",
+  plugins: "stylelint-scss",
   rules: {
-    // All
-    "order/order": [
-      [
-        "custom-properties",
-        "dollar-variables",
-        {
-          type: "at-rule",
-          name: "extend"
-        },
-        {
-          type: "at-rule",
-          name: "mixin"
-        },
-        "declarations",
-        {
-          type: "at-rule",
-          name: "include"
-        },
-        {
-          type: "rule",
-          selector: /^&:[\w-]+$/
-        },
-        {
-          type: "rule",
-          selector: /^&::[\w-]+$/
-        },
-        "rules"
-      ]
-    ] /* 
-    'order/properties-order': [
-      'position',
-      'top',
-      'right',
-      'bottom',
-      'left',
-      'z-index',
-      'display',
-      'float',
-      'width',
-      'min-width',
-      'max-width',
-      'height',
-      'min-height',
-      'max-height',
-      'box-sizing',
-      'padding',
-      'padding-top',
-      'padding-right',
-      'padding-bottom',
-      'padding-left',
-      'margin',
-      'margin-top',
-      'margin-right',
-      'margin-bottom',
-      'margin-left',
-      'overflow',
-      'overflow-x',
-      'overflow-y',
-      'clip',
-      'clear',
-      'font',
-      'font-family',
-      'font-size',
-      'font-style',
-      'font-weight',
-      'font-variant',
-      'font-size-adjust',
-      'font-stretch',
-      'font-effect',
-      'font-emphasize',
-      'font-emphasize-position',
-      'font-emphasize-style',
-      'font-smooth',
-      'hyphens',
-      'line-height',
-      'color',
-      'text-align',
-      'text-align-last',
-      'text-emphasis',
-      'text-emphasis-color',
-      'text-emphasis-style',
-      'text-emphasis-position',
-      'text-decoration',
-      'text-indent',
-      'text-justify',
-      'text-outline',
-      'text-overflow',
-      'text-overflow-ellipsis',
-      'text-overflow-mode',
-      'text-shadow',
-      'text-transform',
-      'text-wrap',
-      'letter-spacing',
-      'word-break',
-      'word-spacing',
-      'word-wrap',
-      'tab-size',
-      'white-space',
-      'vertical-align',
-      'list-style',
-      'list-style-position',
-      'list-style-type',
-      'list-style-image',
-      'pointer-events',
-      'fill',
-      'fill-opacity',
-      'stroke',
-      'stroke-opacity',
-      'stroke-width',
-      'shape-rendering',
-      'cursor',
-      'visibility',
-      'zoom',
-      'flex-direction',
-      'flex-order',
-      'flex-pack',
-      'flex-align',
-      'table-layout',
-      'empty-cells',
-      'caption-side',
-      'border-spacing',
-      'border-collapse',
-      'content',
-      'quotes',
-      'counter-reset',
-      'counter-increment',
-      'resize',
-      'user-select',
-      'nav-index',
-      'nav-up',
-      'nav-right',
-      'nav-down',
-      'nav-left',
-      'background',
-      'background-color',
-      'background-image',
-      'filter',
-      'background-repeat',
-      'background-attachment',
-      'background-position',
-      'background-position-x',
-      'background-position-y',
-      'background-clip',
-      'background-origin',
-      'background-size',
-      'border',
-      'border-color',
-      'border-style',
-      'border-width',
-      'border-top',
-      'border-top-color',
-      'border-top-style',
-      'border-top-width',
-      'border-right',
-      'border-right-color',
-      'border-right-style',
-      'border-right-width',
-      'border-bottom',
-      'border-bottom-color',
-      'border-bottom-style',
-      'border-bottom-width',
-      'border-left',
-      'border-left-color',
-      'border-left-style',
-      'border-left-width',
-      'border-radius',
-      'border-top-left-radius',
-      'border-top-right-radius',
-      'border-bottom-right-radius',
-      'border-bottom-left-radius',
-      'border-image',
-      'border-image-source',
-      'border-image-slice',
-      'border-image-width',
-      'border-image-outset',
-      'border-image-repeat',
-      'outline',
-      'outline-width',
-      'outline-style',
-      'outline-color',
-      'outline-offset',
-      'box-shadow',
-      'opacity',
-      'transition',
-      'transition-delay',
-      'transition-timing-function',
-      'transition-duration',
-      'transition-property',
-      'transform',
-      'transform-origin',
-      'animation',
-      'animation-name',
-      'animation-duration',
-      'animation-fill-mode',
-      'animation-play-state',
-      'animation-timing-function',
-      'animation-delay',
-      'animation-iteration-count',
-      'animation-direction',
-    ], */,
-    "order/properties-alphabetical-order": OFF
+    // @-else
+    "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
+    "scss/at-else-closing-brace-space-after": "always-intermediate",
+    "scss/at-else-empty-line-before": "never",
+    "scss/at-else-if-parentheses-space-before": "always",
+
+    // @-extend
+    "scss/at-extend-no-missing-placeholder": ON,
+
+    // @-function
+    "scss/at-function-named-arguments": OFF,
+    "scss/at-function-parentheses-space-before": "never",
+    "scss/at-function-pattern": OFF,
+
+    // @-if
+    "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
+    "scss/at-if-closing-brace-space-after": "always-intermediate",
+
+    // @-import
+    "scss/at-import-no-partial-leading-underscore": ON,
+    "scss/at-import-partial-extension-blacklist": ["scss"],
+    "scss/at-import-partial-extension-whitelist": OFF,
+
+    // @-mixin
+    "scss/at-mixin-argumentless-call-parentheses": "always",
+    "scss/at-mixin-named-arguments": OFF,
+    "scss/at-mixin-parentheses-space-before": "never",
+    "scss/at-mixin-pattern": OFF,
+
+    // @-rule
+    "at-rule-no-unknown": OFF, // core rule disabled
+    "scss/at-rule-no-unknown": true,
+
+    // $-variable
+    "scss/dollar-variable-colon-newline-after": "always-multi-line",
+    "scss/dollar-variable-colon-space-after": "always-single-line",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/dollar-variable-default": OFF,
+    "scss/dollar-variable-empty-line-before": OFF,
+    "scss/dollar-variable-no-missing-interpolation": ON,
+    "scss/dollar-variable-pattern": OFF,
+
+    // %-placeholder
+    "scss/percent-placeholder-pattern": OFF,
+
+    // //-comment
+    "scss/double-slash-comment-empty-line-before": [
+      "always",
+      {
+        except: ["first-nested"],
+        ignore: ["between-comments", "stylelint-commands"]
+      }
+    ],
+    "scss/double-slash-comment-inline": OFF,
+    "scss/double-slash-comment-whitespace-inside": "always",
+
+    // Declaration
+    "scss/declaration-nested-properties": OFF,
+    "scss/declaration-nested-properties-no-divided-groups": ON,
+
+    // Media feature
+    "scss/media-feature-value-dollar-variable": OFF,
+
+    // Operator
+    "scss/operator-no-newline-after": OFF,
+    "scss/operator-no-newline-before": ON,
+    "scss/operator-no-unspaced": OFF,
+
+    // Partial
+    "scss/partial-no-import": OFF,
+
+    // Selector
+    "scss/selector-no-redundant-nesting-selector": ON,
+
+    // General / Sheet
+    "scss/no-duplicate-dollar-variables": OFF
   }
 };
